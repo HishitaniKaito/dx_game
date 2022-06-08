@@ -7,6 +7,7 @@
 #include"Bullet.h"
 #include"enemy.h"
 #include"obj.h"
+
 float inter = 0.25f;
 float einter = 1.0f;
 bool init = false;
