@@ -1,4 +1,10 @@
 #include"Player.h"
+#include"Bullet.h"
+
+extern float timer;
+extern float inter;
+extern std::list<Object*> object;
+
 void Player :: update(float delta_time)
 {
 	tnl::Vector3 mv;
@@ -16,6 +22,16 @@ void Player :: update(float delta_time)
 	}
 	mv.normalize();
 	pos_ += mv * speed_;
+	timer += delta_time;
+	if (tnl::Input::IsKeyDown(tnl::Input::eKeys::KB_Z))
+	{
+		
+		if (timer > inter)
+		{
+			timer = 0;
+			object.emplace_back(Object::Create<Bullet>(pos_,10));
+		}
+	}
 }
 void Player::draw()
 {

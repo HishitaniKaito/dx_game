@@ -14,7 +14,10 @@ public :
 		return new_obj;
 	}
 
-
+	bool alive = true;
 	float speed_ = 0;
 	tnl::Vector3 pos_;
+
+	virtual void update(float delta_time) {};
+	virtual void draw() {};
 };

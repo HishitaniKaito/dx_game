@@ -8,6 +8,6 @@ public :
 	
 	const float BODY_RADIUS = 10;
 
-	void update(float delta_time);
-	void draw();
+	void update(float delta_time) override;
+	void draw() override;
 };

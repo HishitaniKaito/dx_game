@@ -13,7 +13,7 @@ public :
 
 	static constexpr float START_SPEED = 5.0f;
 
-	void update(float delta_time);
+	void update(float delta_time)override;
 
-	void draw();
+	void draw()override;
 };
