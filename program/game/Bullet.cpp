@@ -1,5 +1,4 @@
 #include"Bullet.h"
-
 void Bullet::update(float delta_time)
 {
 	pos_ += tnl::Vector3::up * -10.0f;

@@ -70,6 +70,9 @@
     <ClCompile Include="program\game\enemy.cpp">
       <Filter>program\game</Filter>
     </ClCompile>
+    <ClCompile Include="program\game\obj.cpp">
+      <Filter>program\game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\game\game_main.h">
@@ -145,6 +148,9 @@
       <Filter>program\game</Filter>
     </ClInclude>
     <ClInclude Include="program\game\enemy.h">
+      <Filter>program\game</Filter>
+    </ClInclude>
+    <ClInclude Include="program\game\obj.h">
       <Filter>program\game</Filter>
     </ClInclude>
   </ItemGroup>

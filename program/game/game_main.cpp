@@ -22,8 +22,8 @@ float timer=0.0f;
 
 void gameMain(float delta_time) 
 {
-	
-	
+	timer += delta_time;
+	etimer += delta_time;
 	if (!init) {
 		player = new Player();
 		init = true;
@@ -77,32 +77,5 @@ void gameMain(float delta_time)
 	{
 		emy->draw();
 	}
-	/*
-	if (tnl::Input::IsKeyDown(eKeys::KB_LEFT)) {
-		//DrawStringEx(200, 200, -1, "on key");
-		v += tnl :: Vector3 :: left * 2.0f;
-	}
-	if (tnl::Input::IsKeyDown(eKeys::KB_RIGHT)) {
-		//DrawStringEx(200, 200, -1, "on key");
-		v += tnl :: Vector3 :: right * 2.0f;
-
-	}
-	if (tnl::Input::IsKeyDown(eKeys::KB_UP)) {
-		//DrawStringEx(200, 200, -1, "on key");
-		v += tnl :: Vector3 :: donw * 2.0f;
-
-	}
-	if (tnl::Input::IsKeyDown(eKeys::KB_DOWN)) {
-		//DrawStringEx(200, 200, -1, "on key");
-		v += tnl :: Vector3 :: up * 2.0f;
-
-	}
-	
-	DrawCircle(v.x, v.y, 30, -1, false);
-	DrawBoxEx(v,100,100);
-
-	DrawStringEx(100, 100, -1, "hello world %d",a);
-	a++;
-	*/
 }
 

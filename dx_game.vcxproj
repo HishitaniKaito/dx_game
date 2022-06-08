@@ -15,6 +15,7 @@
     <ClCompile Include="program\game\Bullet.cpp" />
     <ClCompile Include="program\game\enemy.cpp" />
     <ClCompile Include="program\game\game_main.cpp" />
+    <ClCompile Include="program\game\obj.cpp" />
     <ClCompile Include="program\game\player.cpp" />
     <ClCompile Include="program\library\tnl_font_texture.cpp" />
     <ClCompile Include="program\library\tnl_input.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="program\game\Bullet.h" />
     <ClInclude Include="program\game\enemy.h" />
     <ClInclude Include="program\game\game_main.h" />
+    <ClInclude Include="program\game\obj.h" />
     <ClInclude Include="program\game\player.h" />
     <ClInclude Include="program\library\picojson.h" />
     <ClInclude Include="program\library\stb_image.h" />
