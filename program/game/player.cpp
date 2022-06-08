@@ -15,7 +15,7 @@ void Player :: update(float delta_time)
 		mv += tnl::Vector3::up;
 	}
 	mv.normalize();
-	pos_ += mv * speed;
+	pos_ += mv * speed_;
 }
 void Player::draw()
 {

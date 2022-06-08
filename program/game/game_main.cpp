@@ -6,6 +6,7 @@
 #include"Player.h"
 #include"Bullet.h"
 #include"enemy.h"
+#include"obj.h"
 
 
 float inter = 0.25f ;
@@ -25,7 +26,13 @@ void gameMain(float delta_time)
 	timer += delta_time;
 	etimer += delta_time;
 	if (!init) {
-		player = new Player();
+		player = Object::Create<Player>
+			(
+				{
+					Player::START_POS_X,
+					Player::START_POS_Y,
+					0
+				},10);
 		init = true;
 	}
 	if (tnl::Input::IsKeyDown(tnl::Input::eKeys::KB_Z))
@@ -34,13 +41,13 @@ void gameMain(float delta_time)
 		if (timer > inter)
 		{
 			timer = 0;
-			bullet.emplace_back(new Bullet(player->pos_));
+			bullet.emplace_back(Object::Create<Bullet>(player->pos_,10));
 		}
 	}
 	if (etimer > einter)
 	{
 		etimer = 0;
-		enemy.emplace_back(new Enemy(epos));
+		enemy.emplace_back(Object::Create<Enemy>(tnl::Vector3(500,-100,0),5));
 	}
 	player->update(delta_time);
 	
